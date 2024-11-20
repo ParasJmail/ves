@@ -9,7 +9,7 @@ const Tour4 = () => {
   const navigate = useNavigate();
 
   const handleContinue = () => {
-    navigate('/tour1')
+    navigate('/accept')
   }
   return (
     <div className='flex flex-row justify-center bg-gray-800 min-h-screen h-fit w-screen px-0'>

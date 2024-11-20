@@ -8,6 +8,15 @@ import Tour1 from './pages/Tour1';
 import Tour2 from './pages/Tour2';
 import Tour3 from './pages/Tour3';
 import Tour4 from './pages/Tour4';
+import OrderCreated from './pages/OrderCreated';
+import PaymentSuccess from './pages/PaymentSuccess';
+import Accept from './pages/Accept';
+import OnDelivery from './pages/OnDelivery';
+import OrderDelivered from './pages/OrderDelivered';
+import Inbox from './pages/Inbox';
+import EmailDetails from './components/EmailDetails';
+import Sent from './pages/Sent';
+import Draft from './pages/Draft';
 
 
 function App() {
@@ -29,6 +38,15 @@ function App() {
           <Route path='/tour2' element={<Tour2/>} />
           <Route path='/tour3' element={<Tour3/>} />
           <Route path='/tour4' element={<Tour4/>} />
+          <Route path='/accept' element={<Accept/>} />
+          <Route path='/order-created' element={<OrderCreated/>} />
+          <Route path='/payment-success' element={<PaymentSuccess/>} />
+          <Route path='/on-delivery' element={<OnDelivery/>} />
+          <Route path='/order-delivered' element={<OrderDelivered/>} />
+          <Route path='/inbox' element={<Inbox/>} />
+          <Route path='/sent' element={<Sent/>} />
+          <Route path='/draft' element={<Draft/>} />
+          <Route path="/email/:id" element={<EmailDetails />} />
         </Routes>
       </Router>
       
