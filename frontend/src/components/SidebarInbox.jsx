@@ -70,7 +70,7 @@ const Sidebar = () => {
                         </li>
                         <li
                             className="cursor-pointer flex pl-20 items-center p-2"
-                            onClick={() => handleNavigation("/settings")}
+                            onClick={() => handleNavigation("/settings/profile")}
                         >
                             <span className="material-icons mr-2"><img src={setting} alt="" /></span> Settings
                         </li>

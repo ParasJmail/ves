@@ -8,7 +8,7 @@ import setting from '../assets/images/setting.png';
 import inbox from '../assets/images/inbox.png';
 import logo2 from '../assets/images/logo2.png'
 
-const Sidebar = () => {
+const SidebarSettings = () => {
     const navigate = useNavigate();  // Hook for navigation
 
     // Function to handle navigation
@@ -40,10 +40,13 @@ const Sidebar = () => {
                             <span className="material-icons mr-2"><img src={order_list} alt="" /></span> Order List
                         </li>
                         <li
-                            className="cursor-pointer flex items-center p-2 rounded-l-full bg-white text-black font-semibold text-lg"
+                            className="cursor-pointer flex items-center p-2 "
                             onClick={() => handleNavigation("/accept")}
                         >
-                            <span className="material-icons mr-2"><img src={order_details} alt="" /></span> Orders Details
+                            <span className="material-icons mr-2"><svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M12.65 2.98414C12.4689 2.82924 12.2383 2.74412 12 2.74414H5C4.73478 2.74414 4.48043 2.8495 4.29289 3.03703C4.10536 3.22457 4 3.47892 4 3.74414V21.7441C4 22.0094 4.10536 22.2637 4.29289 22.4513C4.48043 22.6388 4.73478 22.7441 5 22.7441H19C19.2652 22.7441 19.5196 22.6388 19.7071 22.4513C19.8946 22.2637 20 22.0094 20 21.7441V9.74414C20 9.5997 19.9687 9.45697 19.9083 9.32578C19.8479 9.19458 19.7598 9.07803 19.65 8.98414L12.65 2.98414ZM13 5.91414L16.3 8.74414H13V5.91414ZM18 20.7441H6V4.74414H11V9.74414C11 10.0094 11.1054 10.2637 11.2929 10.4512C11.4804 10.6388 11.7348 10.7441 12 10.7441H18V20.7441Z" fill="white" />
+                            </svg>
+                            </span> Orders Details
                         </li>
                         <li
                             className="cursor-pointer flex items-center p-2"
@@ -58,10 +61,13 @@ const Sidebar = () => {
                             <span className="material-icons mr-2"><img src={reviews} alt="" /></span> Reviews
                         </li>
                         <li
-                            className="cursor-pointer flex items-center p-2"
+                            className="cursor-pointer flex items-center p-2 rounded-l-full bg-white text-black font-semibold text-lg"
                             onClick={() => handleNavigation("/settings/profile")}
                         >
-                            <span className="material-icons mr-2"><img src={setting} alt="" /></span> Settings
+                            <span className="material-icons mr-2"><svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M20.4023 14.3241C20.76 14.5141 21.036 14.8141 21.2301 15.1141C21.6083 15.7341 21.5776 16.4941 21.2097 17.1641L20.4943 18.3641C20.1162 19.0041 19.411 19.4041 18.6855 19.4041C18.3278 19.4041 17.9292 19.3041 17.6022 19.1041C17.3365 18.9341 17.0299 18.8741 16.7029 18.8741C15.6911 18.8741 14.8429 19.7041 14.8122 20.6941C14.8122 21.8441 13.872 22.7441 12.6968 22.7441H11.3069C10.1215 22.7441 9.18125 21.8441 9.18125 20.6941C9.16081 19.7041 8.31259 18.8741 7.30085 18.8741C6.96361 18.8741 6.65702 18.9341 6.40153 19.1041C6.0745 19.3041 5.66572 19.4041 5.31825 19.4041C4.58245 19.4041 3.87729 19.0041 3.49917 18.3641L2.79402 17.1641C2.4159 16.5141 2.39546 15.7341 2.77358 15.1141C2.93709 14.8141 3.24368 14.5141 3.59115 14.3241C3.87729 14.1841 4.06125 13.9541 4.23498 13.6841C4.74596 12.8241 4.43937 11.6941 3.57071 11.1841C2.55897 10.6141 2.23194 9.34414 2.81446 8.35414L3.49917 7.17414C4.09191 6.18414 5.35913 5.83414 6.38109 6.41414C7.27019 6.89414 8.425 6.57414 8.9462 5.72414C9.10972 5.44414 9.20169 5.14414 9.18125 4.84414C9.16081 4.45414 9.27323 4.08414 9.4674 3.78414C9.84553 3.16414 10.5302 2.76414 11.2763 2.74414H12.7172C13.4735 2.74414 14.1582 3.16414 14.5363 3.78414C14.7203 4.08414 14.8429 4.45414 14.8122 4.84414C14.7918 5.14414 14.8838 5.44414 15.0473 5.72414C15.5685 6.57414 16.7233 6.89414 17.6226 6.41414C18.6344 5.83414 19.9118 6.18414 20.4943 7.17414L21.179 8.35414C21.7718 9.34414 21.4447 10.6141 20.4228 11.1841C19.5541 11.6941 19.2475 12.8241 19.7687 13.6841C19.9322 13.9541 20.1162 14.1841 20.4023 14.3241ZM9.10972 12.7541C9.10972 14.3241 10.4076 15.5741 12.0121 15.5741C13.6165 15.5741 14.8838 14.3241 14.8838 12.7541C14.8838 11.1841 13.6165 9.92414 12.0121 9.92414C10.4076 9.92414 9.10972 11.1841 9.10972 12.7541Z" fill="#464255" />
+                            </svg>
+                            </span> Settings
                         </li>
                     </ul>
                 </div>
@@ -78,4 +84,4 @@ const Sidebar = () => {
     );
 };
 
-export default Sidebar;
+export default SidebarSettings;

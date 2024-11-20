@@ -17,15 +17,13 @@ import Inbox from './pages/Inbox';
 import EmailDetails from './components/EmailDetails';
 import Sent from './pages/Sent';
 import Draft from './pages/Draft';
+import ProfileSettings from './pages/ProfileSettings';
+import ProfilePassword from './pages/ProfilePassword';
+import ProfileNotification from './pages/ProfileNotification';
 
 
 function App() {
-  const [count, setCount] = useState(0);
 
-
-  function handleClick(){
-    setCount(count + 1);
-  }
 
   return (
     <>
@@ -47,6 +45,9 @@ function App() {
           <Route path='/sent' element={<Sent/>} />
           <Route path='/draft' element={<Draft/>} />
           <Route path="/email/:id" element={<EmailDetails />} />
+          <Route path="/settings/profile" element={<ProfileSettings />} />
+          <Route path="/settings/password" element={<ProfilePassword />} />
+          <Route path="/settings/notification" element={<ProfileNotification />} />
         </Routes>
       </Router>
       
